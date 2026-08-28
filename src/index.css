@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #030a21;
+    --bg-navy: #06123b;
+    --bg-card: rgba(8, 24, 74, 0.75);
+    --core-blue: #0066ff;
+    --core-blue-bright: #0084ff;
+    --core-cyan: #38bdf8;
+    --core-white: #ffffff;
+    --border-blue: rgba(56, 189, 248, 0.2);
+    --glow-blue: 0 0 35px rgba(0, 102, 255, 0.45);
+  }
+
+  * {
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #030a21;
+    color: #ffffff;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  body {
+    background-color: #030a21;
+    color: #ffffff;
+    overflow-x: clip;
+    max-width: 100%;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  #root {
+    overflow-x: clip;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Custom Scrollbar in Electric Blue */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #030a21;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #0066ff;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #38bdf8;
+  }
+}
+
+/* Custom scrollbar for left service channels list */
+.service-scroll-container::-webkit-scrollbar {
+  width: 5px;
+}
+.service-scroll-container::-webkit-scrollbar-track {
+  background: rgba(6, 18, 59, 0.4);
+  border-radius: 9999px;
+}
+.service-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 102, 255, 0.6);
+  border-radius: 9999px;
+}
+.service-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.9);
+}
+
+/* Display Fonts */
+.font-display {
+  font-family: 'Syne', 'Space Grotesk', sans-serif;
+}
+.font-mono-tech {
+  font-family: 'Space Grotesk', monospace;
+}
+
+/* Deep Blue & White Glassmorphism */
+.glass-panel-blue {
+  background: rgba(6, 18, 59, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+}
+
+.glass-panel-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(10, 32, 98, 0.9);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 10px 40px -5px rgba(0, 102, 255, 0.45);
+}
+
+/* Vibrant Blue & White Text Glows */
+.glow-text-white {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.85);
+}
+
+.glow-text-blue {
+  text-shadow: 0 0 25px rgba(0, 102, 255, 0.9);
+}
+
+.glow-box-blue {
+  box-shadow: 0 0 40px rgba(0, 102, 255, 0.35);
+}
+
+/* Deep Stage Radial Light (Blue & White Ambient) */
+.stage-spotlight-blue {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(0, 102, 255, 0.35) 0%,
+    rgba(56, 189, 248, 0.15) 35%,
+    rgba(3, 10, 33, 0) 70%
+  );
+}
+
+/* Animated Soundwave Equalizer */
+@keyframes soundwave {
+  0%, 100% {
+    height: 15%;
+  }
+  50% {
+    height: 95%;
+  }
+}
+
+.animate-wave-1 {
+  animation: soundwave 1.1s ease-in-out infinite;
+}
+.animate-wave-2 {
+  animation: soundwave 0.85s ease-in-out infinite 0.2s;
+}
+.animate-wave-3 {
+  animation: soundwave 1.35s ease-in-out infinite 0.4s;
+}
+.animate-wave-4 {
+  animation: soundwave 0.95s ease-in-out infinite 0.1s;
+}
+.animate-wave-5 {
+  animation: soundwave 1.25s ease-in-out infinite 0.3s;
+}
+
+/* Stage Laser Sweep */
+@keyframes laserSweep {
+  0% {
+    transform: rotate(-35deg) translateY(-20%);
+    opacity: 0.3;
+  }
+  50% {
+    transform: rotate(35deg) translateY(0%);
+    opacity: 0.85;
+  }
+  100% {
+    transform: rotate(-35deg) translateY(-20%);
+    opacity: 0.3;
+  }
+}
+
+.animate-laser {
+  animation: laserSweep 8s ease-in-out infinite;
+}
+
+/* Pulse Glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
